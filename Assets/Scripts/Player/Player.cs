@@ -15,6 +15,18 @@ public class Player : MonoBehaviour
     public KeyCode keyTypeUp = KeyCode.UpArrow;
     public KeyCode keyTypeDown = KeyCode.DownArrow;
 
+    [Header ("CurrentPoints")]
+    public int currentPoints;
+
+    private void Awake() {
+        ResetPlayer();
+        // quando começar o jogo vai zerar os pontos 
+    }
+
+    private void ResetPlayer(){
+        currentPoints = 0;
+    }
+
 
     // fazer o meu player se mexer quando apertar o botão na posição certa 
     // como - usando o Rigbody 
@@ -30,5 +42,10 @@ public class Player : MonoBehaviour
             //se movendo ser usar o Rigidbody
             //transform.Translate(transform.up * speed * -1);
         }
+    }
+
+    public void AddPoint(){
+        currentPoints++;
+        Debug.Log(currentPoints);
     }
 }

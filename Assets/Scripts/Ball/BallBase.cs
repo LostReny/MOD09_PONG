@@ -31,11 +31,11 @@ public class BallBase : MonoBehaviour
             OnPlayerCollision(); 
             // troca pelo método ali em baixo 
             /*speed.x *= -1;*/
-            Debug.Log("OncollisionPlayer");
+            //Debug.Log("OncollisionPlayer");
         }
         else if(collision.gameObject.tag == "Border"){
             speed.y *= -1;
-            Debug.Log("OncollisionWall");
+            //Debug.Log("OncollisionWall");
         }
     }
     // esta entrando em colisão
